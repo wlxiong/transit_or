@@ -1,0 +1,29 @@
+param casename := "veh_sched_ex2.csv";
+param fleetsize := 9;
+param clocktime := 7;
+param horizon := 120;
+param depot := DEP;
+
+set LINE := A B C D;
+param offset := 
+	A 19 
+	B  4 # 10: obj -> 140
+	C  0 
+	D 18;
+param headway := 
+	A 20
+	B 20
+	C 20
+	D 20;
+param cycletime := 
+	A 32
+	B 28 
+	C 36 
+	D 28;
+
+param dhtime: DEP   A   B   C   D := 
+		  DEP   .  10  10  10  10
+		    A  10   0   2   2   2
+		    B  10   2   0   0   0
+		    C  10   2   0   0   0
+		    D  10   2   0   0   0;

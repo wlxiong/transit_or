@@ -1,0 +1,36 @@
+set LINE := A B C D;
+
+set HUB := S0 S1 L0 L1;
+
+param numpng := [S0,*,*]:   A   B   C   D := 
+						A   0   0  30   0
+						B   0   0   0   0
+						C  10   0   0   0
+						D   0   0   0   0
+				[S1,*,*]:   A   B   C   D :=
+						A   0   0  30   0
+						B   0   0   0   0
+						C  10   0   0   0
+						D   0   0   0   0
+				[L0,*,*]:   A   B   C   D :=
+						A   0   0  30   0
+						B   0   0   0   0
+						C  10   0   0  80
+						D   0   0  40   0
+				[L1,*,*]:   A   B   C   D :=
+						A   0   0  30   0
+						B   0   0   0   0
+						C  10   0   0  80
+						D   0   0  40   0;
+
+param headway := 
+	A 20
+	B 20
+	C 20
+	D 20;
+
+param runtime:   A   B   C   D := 
+			S0  16   5  15  -1
+			S1  16  23  21  -1
+			L0  -1  14  18   0
+			L1  -1  14  18  28;
